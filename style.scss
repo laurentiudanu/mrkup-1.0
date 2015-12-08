@@ -1,2 +1,5 @@
-body {
-}
+body { font-size: 62.5%; }  /* Sets our base type size to 10px, easing the maths. */
+h1 { font-size: 6.7773em; /* 10 x 6.7773em = 67.773 */ }
+h2 { font-size: 4.1887em; /* 10 x 4.1887em = 41.887 */ }
+h3 { font-size: 2.5888em; /* 10 x 2.5888em = 25.888 */ }
+p { font-size: 1.6em; /* 10 x 1.6 = 16 */ }
