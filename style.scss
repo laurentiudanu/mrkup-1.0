@@ -140,3 +140,63 @@ nav {
      }
    }
 }
+/* Go go google fonts! */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300|Lato:300,400);
+
+/* Variables */
+$easeOutCust:cubic-bezier(.03,.16,.39,0.99);
+$easeInQuad: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+$globalDelay: .5; //just so we can see what's going on even when codepen refreshes funny
+
+
+button {
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.03),0px 1px 2px 0px rgba(0,0,0,0.30);
+    transition: background-color .3s $easeOutCust;
+    
+        &:hover {background-color: #CB326F;}
+}
+
+section {
+  animation: 
+  slideIn .65s $globalDelay+0s $easeOutBack both,
+  fadeIn 0.25s $globalDelay+0s $easeInQuad both;
+}
+
+button {
+  animation: slideDown .3s $globalDelay+.35s $easeOutCust both,
+  fadeIn .2s $globalDelay+.3s $easeInQuad both;
+}
+
+h2, h3 {
+animation:
+slideInShort 0.25s $globalDelay+.25s $easeOutCust both, 
+fadeIn 0.1s $globalDelay+.2s $easeInQuad both;
+}
+
+p {
+animation:
+slideInShort 0.25s $globalDelay+.3s $easeOutCust both, 
+fadeIn 0.1s $globalDelay+.25s $easeInQuad both;
+}
+
+@keyframes slideIn {
+  from {transform:translateY(400px);}
+  to {transform:translateY(0);}
+}
+
+@keyframes slideInShort {
+  from {transform:translateY(80px);}
+  to {transform:translateY(0);}
+}
+
+@keyframes slideDown {
+  from {transform: translateY(-120px)}
+  to {transform: translateY(0)}
+}
+
+@keyframes fadeIn {
+  from {opacity:0;}
+  to{ opaticy: 1;}
+}
